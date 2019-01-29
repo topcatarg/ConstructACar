@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TheCar
 {
-    public class Class1
+    public class Car
     {
     }
 }

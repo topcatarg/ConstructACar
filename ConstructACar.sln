@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheGUI", "TheGUI\TheGUI.csproj", "{7C74521F-2D8F-4D23-ACCC-8AAE478907AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheTests", "TheTests\TheTests.csproj", "{792A1F9B-9D6F-4D52-9C39-1CC6ECF808F6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TheTests", "TheTests\TheTests.csproj", "{792A1F9B-9D6F-4D52-9C39-1CC6ECF808F6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TheCar", "TheCar\TheCar.csproj", "{305CE344-D877-40D9-9090-689DB34D1D34}"
 EndProject
