@@ -8,21 +8,23 @@ namespace TheCar
 {
     public class Engine : IEngine
     {
-        public bool IsRunning => throw new NotImplementedException();
+        public bool IsRunning => EngineState;
+
+        private bool EngineState { get; set; } = false;
 
         public void Consume(double liters)
         {
-            throw new NotImplementedException();
+            Console.WriteLine("consume engine");
         }
 
         public void Start()
         {
-            throw new NotImplementedException();
+            EngineState = true;
         }
 
         public void Stop()
         {
-            throw new NotImplementedException();
+            EngineState = false;
         }
     }
 }

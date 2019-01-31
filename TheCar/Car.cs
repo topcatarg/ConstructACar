@@ -14,36 +14,51 @@ namespace TheCar
 
         private IFuelTank fuelTank;
 
+        private const double FuelConsumption = 0.0003;
+
         public Car()
         {
-
+            SetupCar(20);
         }
 
         public Car(double fuelLevel)
         {
-
+            SetupCar(fuelLevel);
         }
 
-        public bool EngineIsRunning => throw new NotImplementedException();
+        private void SetupCar(double fuellevel)
+        {
+            engine = new Engine();
+            fuelTank = new FuelTank(fuellevel);
+            fuelTankDisplay = new FuelTankDisplay(fuelTank);
+        }
+
+        public bool EngineIsRunning => engine.IsRunning;
 
         public void EngineStart()
         {
-            throw new NotImplementedException();
+            if (fuelTank.FillLevel > 0)
+                engine.Start();
         }
 
         public void EngineStop()
         {
-            throw new NotImplementedException();
+            engine.Stop();
         }
 
         public void Refuel(double liters)
         {
-            throw new NotImplementedException();
+            if (liters < 0)
+                return;
+            fuelTank.Refuel(liters);
         }
 
         public void RunningIdle()
         {
-            throw new NotImplementedException();
+            if (engine.IsRunning)
+                fuelTank.Consume(FuelConsumption);
+            if (fuelTank.FillLevel == 0)
+                engine.Stop();
         }
     }
 
